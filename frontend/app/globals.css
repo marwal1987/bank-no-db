@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply m-auto max-w-screen-xl min-h-dvh flex flex-col items-center bg-[url('/creditCard.jpg')] bg-cover;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.header {
+  @apply w-screen gap-6 flex items-center justify-center sticky top-0 z-50 bg-slate-900/70 backdrop-blur-md;
+}
+
+.nav-menu {
+  @apply flex justify-center items-center p-6 gap-12;
+}
+
+.hero {
+  @apply my-48 container flex min-h-screen flex-col gap-24 items-center justify-start;
+}
+
+.button-hero {
+  @apply text-xl hover:text-2xl border-2 text-stone-100 hover:text-stone-50 text-center drop-shadow-xl p-4 rounded-xl bg-slate-700 hover:bg-cyan-400/80 hover:font-bold transition-all ease-in-out duration-500;
+}
+
+h2 {
+  @apply text-3xl text-center font-bold text-slate-700 drop-shadow-xl;
+}
+
+.button {
+  @apply text-lg text-stone-100 hover:text-stone-50  text-center drop-shadow-lg px-4 py-2 border border-slate-700 hover:border-slate-300 rounded-md bg-slate-700 transition-all ease-in-out duration-500;
+}
+
+.link {
+  @apply text-center text-stone-100 text-lg  drop-shadow-2xl;
+}
+
+.card {
+  @apply my-48 max-w-80 flex flex-col items-center justify-center gap-6  p-12 rounded-lg drop-shadow-2xl bg-gradient-to-tr from-cyan-300/80 to-cyan-400/80 border-2 border-stone-200;
+}
+
+.input-field {
+  @apply p-2 rounded-md bg-stone-100 w-[85%];
+}
