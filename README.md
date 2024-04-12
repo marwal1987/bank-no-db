@@ -1,4 +1,4 @@
-# Skoluppgift - Bank-app utan databas och vettig hantering av token samt HTTP och inte HTTPS
+# Skoluppgift - Bank-app utan databas - HTTP och inte HTTPS
 
 - sessionStorage används för att lagra token för varje session.
 - HTTP (**_ej HTTPS_**)
