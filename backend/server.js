@@ -21,16 +21,16 @@ function generateOTP() {
 }
 
 // Skapa användare
-app.post("/users", (req, res) => {
-    const { username, password } = req.body;
-    if (!username || !password) {
-        return res.status(400).json({ message: "Alla fält måste fyllas i" });
-    }
-    const id = users.length + 1;
-    users.push({ id, username, password });
-    accounts.push({ id, userId: id, amount: 0 });
-    res.status(200).json({ message: "Användare skapad!" });
-});
+    app.post("/users", (req, res) => {
+        const { username, password } = req.body;
+        if (!username || !password) {
+            return res.status(400).json({ message: "Alla fält måste fyllas i" });
+        }
+        const id = users.length + 1;
+        users.push({ id, username, password });
+        accounts.push({ id, userId: id, amount: 0 });
+        res.status(200).json({ message: "Användare skapad!" });
+    });
 
 // Logga in och skapa session
 app.post("/sessions", (req, res) => {
@@ -76,7 +76,7 @@ app.post("/me/accounts/transactions", (req, res) => {
     }
 });
 
-// Starta servern
-app.listen(port, () => {
-    console.log(`Bankens backend körs på http://localhost:${port}`);
-});
+    // Starta servern
+    app.listen(port, () => {
+        console.log(`Bankens backend körs på http://localhost:${port}`);
+    });

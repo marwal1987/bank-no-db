@@ -18,12 +18,12 @@ export default function CreateUserPage() {
         body: JSON.stringify({ username, password }),
       });
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       router.push("/login");
     } catch (error) {
       console.error("Error:", error);
     }
-  };
+  }
 
   return (
     <section className="card">
